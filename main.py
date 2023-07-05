@@ -1,44 +1,49 @@
 if __name__ == "__main__":
     # Task 1
-    # num1 = input("Введіть перще число: ")
-    # num2 = input("Введіть друге число: ")
-    # num3 = input("Введіть третє число: ")
+    # first_Num = int(input("Введіть перше число: "))
+    # second_Num = int(input("Введіть друге число: "))
+    # third_Num = int(input("Введіть третє число: "))
     #
-    # fullNum = num1 + num2 + num3
-    # print(fullNum)
+    # numbers_Sum = first_Num + second_Num + third_Num
+    # numbers_Product = first_Num * second_Num * third_Num
+    #
+    # print("Сума: ", numbers_Sum)
+    # print("Добуток: ", numbers_Product)
 
     # Task 2
-    # first_Number = input("Введіть перше число: ")
-    # second_Number = input("Введіть друге число: ")
-    # third_Number = input("Введіть третє число: ")
-    # fourth_Number = input("Введіть четверте число: ")
+    # earnings = int(input("Введіть свою зарплату за місяць в гривнях: "))
+    # expenses_Bank = int(input("Введіть суму місячного платежу за кредитом у банку: "))
+    # expenses_Utilities = int(input("Введіть заборгованість за комунальні послуги: "))
     #
-    # whole_Number = first_Number + second_Number + third_Number + fourth_Number
-    # print(whole_Number)
+    # all_expenses = expenses_Utilities + expenses_Bank
+    # remaining_money = earnings - all_expenses
     #
-    # print(int(first_Number) * int(second_Number) * int(third_Number) * int(fourth_Number))
+    # print("Залишок: ", remaining_money, "грн")
 
     # Task 3
-    # meters = int(input("Введіть метри: "))
-    # centimeters = meters * 100
-    # decimeters = meters * 10
-    # millimeters = meters * 1000
-    # miles = meters / 1609.344
+    # diagonal_One = float(input("Введіть довжину першої діагоналі: "))
+    # diagonal_Two = float(input("Введіть довжину другої діагоналі: "))
     #
-    # print("Метрів:", meters)
-    # print("Сантиметрів: ", centimeters)
-    # print("Дециметрів: ", decimeters)
-    # print("Міліметрів: ", millimeters)
-    # print("Миль: ", miles)
+    # S = (diagonal_One * diagonal_Two) / 2
+    #
+    # print("Площа вашого ромба: ", S)
 
     # Task 4
-    # base = int(input("Введіть розмір основи: "))
-    # height = int(input("Введіть розмір висоти: "))
-    # S = 0.5 * base * height
-    #
-    # print("Площа цього трикутника: ", S)
 
-    # Task 5
-    # custom_Numbers = str(input("Введіть числа: ")[::-1])
+    # print(" " "Гривні - 1 \n", "Долари - 2 \n", "Євро - 3 \n")
     #
-    # print(custom_Numbers)
+    # value_type = int(input("Введіть тип грошей: "))
+    # value = int(input("Введіть кількість грошей: "))
+    #
+    # if value_type == 1:  # Гривень
+    #     print("Курс за 7.5.2023")
+    #     print("Доларів: ", value * 0.027)
+    #     print("Євро: ", value * 0.025)
+    # elif value_type == 2:  # Доларів
+    #     print("Курс за 7.5.2023")
+    #     print("Гривень: ", value / 0.027 )
+    #     print("Євро: ", value * 0.92)
+    # else:  # Євро
+    #     print("Курс за 7.5.2023")
+    #     print("Гривень: ", value / 0.025 )
+    #     print("Доларів: ", value / 0.92)
