@@ -1,44 +1,62 @@
 if __name__ == "__main__":
     # Task 1
-    # num1 = input("Введіть перще число: ")
-    # num2 = input("Введіть друге число: ")
-    # num3 = input("Введіть третє число: ")
+    # print(" ""Множення -1 \n", "Додавання -2")
     #
-    # fullNum = num1 + num2 + num3
-    # print(fullNum)
+    # type = int(input("Введіть тип дії: "))
+    #
+    # num1 = int(input("Введіть перше число: "))
+    # num2 = int(input("Введіть друге число: "))
+    # num3 = int(input("Введіть третє число: "))
+    #
+    # num_Sum = num3 + num2 + num1
+    # num_Product = num3 * num2 * num1
+    #
+    # if type == 1:
+    #     print("Добуток цих чисел: ", num_Product)
+    # else:
+    #     print("Сума цих чисел: ", num_Sum)
 
     # Task 2
-    # first_Number = input("Введіть перше число: ")
-    # second_Number = input("Введіть друге число: ")
-    # third_Number = input("Введіть третє число: ")
-    # fourth_Number = input("Введіть четверте число: ")
+
+    # print(" ""Максимальне число -1 \n", "Мінімальне число -2 \n", "Середньоарифметичне чисел -3")
     #
-    # whole_Number = first_Number + second_Number + third_Number + fourth_Number
-    # print(whole_Number)
+    # type = int(input("Введіть тип дії: "))
     #
-    # print(int(first_Number) * int(second_Number) * int(third_Number) * int(fourth_Number))
+    # num1 = int(input("Введіть перше число: "))
+    # num2 = int(input("Введіть друге число: "))
+    # num3 = int(input("Введіть третє число: "))
+    #
+    # if type == 1:
+    #     if num1 > num2 and num3:
+    #         print(num1)
+    #     elif num2 > num1 and num3:
+    #         print(num2)
+    #     else:
+    #         print(num3)
+    #
+    # if type == 2:
+    #     if num1 < num2 and num3:
+    #         print(num1)
+    #     elif num2 < num1 and num3:
+    #         print(num2)
+    #     else:
+    #         print(num3)
+    #
+    # if type == 3:
+    #     print(round((num1 + num2 + num3) / 3, 1))
+
 
     # Task 3
-    # meters = int(input("Введіть метри: "))
-    # centimeters = meters * 100
-    # decimeters = meters * 10
-    # millimeters = meters * 1000
-    # miles = meters / 1609.344
-    #
-    # print("Метрів:", meters)
-    # print("Сантиметрів: ", centimeters)
-    # print("Дециметрів: ", decimeters)
-    # print("Міліметрів: ", millimeters)
-    # print("Миль: ", miles)
 
-    # Task 4
-    # base = int(input("Введіть розмір основи: "))
-    # height = int(input("Введіть розмір висоти: "))
-    # S = 0.5 * base * height
-    #
-    # print("Площа цього трикутника: ", S)
+    print(" ""В милі -1 \n", "В дюйми -2 \n", "В ярди -3")
 
-    # Task 5
-    # custom_Numbers = str(input("Введіть числа: ")[::-1])
-    #
-    # print(custom_Numbers)
+    type = int(input("Введіть в що перетворити: "))
+
+    meters = int(input("Введіть кількість метрів: "))
+
+    if type == 1:
+        print("В милях: ", round(meters * 0.00062137, 2))
+    elif type == 2:
+        print("В дюймах: ", round(meters * 39.370, 2))
+    else:
+        print("В ярдах: ", round(meters * 1.0936, 2))
