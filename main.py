@@ -1,44 +1,84 @@
+import json
+
 if __name__ == "__main__":
-    # Task 1
-    # num1 = input("Введіть перще число: ")
-    # num2 = input("Введіть друге число: ")
-    # num3 = input("Введіть третє число: ")
-    #
-    # fullNum = num1 + num2 + num3
-    # print(fullNum)
+# # Task 1
 
-    # Task 2
-    # first_Number = input("Введіть перше число: ")
-    # second_Number = input("Введіть друге число: ")
-    # third_Number = input("Введіть третє число: ")
-    # fourth_Number = input("Введіть четверте число: ")
-    #
-    # whole_Number = first_Number + second_Number + third_Number + fourth_Number
-    # print(whole_Number)
-    #
-    # print(int(first_Number) * int(second_Number) * int(third_Number) * int(fourth_Number))
+#  # Користувач вводить числа діапазону
+# num_One = int(input("Введіть початок діапазону: "))
+# num_Two = int(input("Введіть кінець діапазону: "))
+#
+# # Визначаємо діапазон
+# for i in range(num_One, num_Two + 1, 1):
+#     # Виводимо числа кратні 7 на екран
+#     if i % 7 == 0:
+#         print("Число кратне 7 у діапазоні: ", i)
 
-    # Task 3
-    # meters = int(input("Введіть метри: "))
-    # centimeters = meters * 100
-    # decimeters = meters * 10
-    # millimeters = meters * 1000
-    # miles = meters / 1609.344
-    #
-    # print("Метрів:", meters)
-    # print("Сантиметрів: ", centimeters)
-    # print("Дециметрів: ", decimeters)
-    # print("Міліметрів: ", millimeters)
-    # print("Миль: ", miles)
+# Task 2
 
-    # Task 4
-    # base = int(input("Введіть розмір основи: "))
-    # height = int(input("Введіть розмір висоти: "))
-    # S = 0.5 * base * height
-    #
-    # print("Площа цього трикутника: ", S)
+# # Користувач вводить числа діапазону
+# num_One = int(input("Введіть початок діапазону: "))
+# num_Two = int(input("Введіть кінець діапазону: "))
+#
+#
+#
+# # Визначаємо діапазон
+# for i in range(num_One, num_Two + 1, 1):
+#     # Виводимо всі числа діапазону
+#     print(i)
+#
+# print("\nПеревернутий діапазон: \n")
+#
+# # Виводимо перевернутий діапазон
+# for i in range(num_Two, num_One - 1, -1):
+#     print(i)
+#
+#
+# num = 0
+# for i in range(num_One, num_Two + 1, 1):
+#     # Виводимо числа кратні 7
+#     if i % 7 == 0:
+#         print("\n")
+#         print("Число кратне 7: ", i)
+#     # Знаходимо кількість чисел кратних 5
+#     if i % 5 == 0:
+#         num += 1
+# # Виводимо кількість чисел кратних 5
+# print("\n")
+# print("Чисел кратних 5: ", num)
 
-    # Task 5
-    # custom_Numbers = str(input("Введіть числа: ")[::-1])
-    #
-    # print(custom_Numbers)
+# Task 3
+# # Вводимо данні
+# num_One = int(input("Введіть початок діапазону: "))
+# num_Two = int(input("Введіть кінець діапазону: "))
+#   # # Робимо діапазон
+# for i in range(num_One, num_Two + 1, 1):
+# # Якщо число кратне 3 і 5 виводимо Fizz Buzz
+#     if i % 3 == 0 and i % 5 == 0:
+#         print("Fizz Buzz")
+# # Якщо число кратне 3  виводимо Fizz
+#         elif i % 3 == 0:
+#         print("Fizz")
+# # Якщо число кратне  5 виводимо  Buzz
+#     elif i % 5 == 0:
+#         print("Buzz")
+# # Виводимо решту чисел
+#     else:
+#         print(i)
+
+# Task 4
+# # Вводимо id елемента щоб видалити
+# id_choice = int(input("Введіть id для видалення: "))
+#
+# # Відкриваємо json
+# with open("products.json", "r") as file:
+#     products = json.load(file)
+#
+# # Берем index та сам лист
+# for index, list in enumerate(products):
+# # Якщо id введене = id яке є у листі то видалити index в якому воно знаходиться
+#     if list['id'] == id_choice:
+#         products.pop(index)
+#
+# # Видаляємо index того id
+# with open("products.json", "w") as file:
+#     json.dump(products, file)
