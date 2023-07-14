@@ -1,44 +1,58 @@
+import math
+
 if __name__ == "__main__":
-    # Task 1
-    # num1 = input("Введіть перще число: ")
-    # num2 = input("Введіть друге число: ")
-    # num3 = input("Введіть третє число: ")
+    # # Task 1
     #
-    # fullNum = num1 + num2 + num3
-    # print(fullNum)
+    # # Вводимо початок і кінець діапазону
+    # start = int(input("Введіть початок діапазону: "))
+    # finish = int(input("Введіть кінець діапазону: "))
+    #
+    # # Робимо сам діапазон
+    # for item in range(start, finish + 1, 1):
+    #     # Принтуємо тільки прості числа
+    #     if item == 2:
+    #         print(2)
+    #     if item == 3:
+    #         print(3)
+    #     if item == 5:
+    #         print(5)
+    #     if item == 7:
+    #         print(7)
+    #     if item % 2 != 0 and item % 3 != 0 and item % 5 != 0 and item % 7 != 0:
+    #         print(item)
 
     # Task 2
-    # first_Number = input("Введіть перше число: ")
-    # second_Number = input("Введіть друге число: ")
-    # third_Number = input("Введіть третє число: ")
-    # fourth_Number = input("Введіть четверте число: ")
+
+    # # Робимо змінну яка буде = end, щоб після кожного множення принтити з нового рядка
+    # num_New = ''
     #
-    # whole_Number = first_Number + second_Number + third_Number + fourth_Number
-    # print(whole_Number)
+    # # Робимо 2 діапазони від 1 до 10 щоб зробити множення
+    # for num in range(1, 10 + 1, 1):
+    #     for item in range(1, 10 + 1, 1):
+    #         # Робимо таблицю множення
+    #         frame = f"{num} * {item} = ", num * item,
     #
-    # print(int(first_Number) * int(second_Number) * int(third_Number) * int(fourth_Number))
+    #         # Пишемо новий стовпчик з нового рядка
+    #         if item == 10:
+    #             num_New = '\n'
+    #         else: num_New = ''
+    #         # Принтимо саму таблцию
+    #         print(frame, end=num_New)
 
     # Task 3
-    # meters = int(input("Введіть метри: "))
-    # centimeters = meters * 100
-    # decimeters = meters * 10
-    # millimeters = meters * 1000
-    # miles = meters / 1609.344
-    #
-    # print("Метрів:", meters)
-    # print("Сантиметрів: ", centimeters)
-    # print("Дециметрів: ", decimeters)
-    # print("Міліметрів: ", millimeters)
-    # print("Миль: ", miles)
 
-    # Task 4
-    # base = int(input("Введіть розмір основи: "))
-    # height = int(input("Введіть розмір висоти: "))
-    # S = 0.5 * base * height
-    #
-    # print("Площа цього трикутника: ", S)
-
-    # Task 5
-    # custom_Numbers = str(input("Введіть числа: ")[::-1])
-    #
-    # print(custom_Numbers)
+    # Вписуємо початок і кінець таблиці
+    start = int(input("Введіть початок діапазону: "))
+    finish = int(input("Введіть кінець діапазону: "))
+    #  Робимо діапазон
+    for num in range(start, finish + 1, 1):
+        for item in range(1, 10 + 1, 1):
+            # Робимо таблицю множення
+            frame = f"{num} * {item} = ", num * item,
+            # Пишемо новий стовпчик з нового рядка
+            if item == 10:
+                num_New = '\n'
+            else:
+                num_New = ''
+            # Принтимо саму таблцию
+            print(frame, end=num_New)
