@@ -1,44 +1,29 @@
 if __name__ == "__main__":
-    # Task 1
-    # num1 = input("Введіть перще число: ")
-    # num2 = input("Введіть друге число: ")
-    # num3 = input("Введіть третє число: ")
-    #
-    # fullNum = num1 + num2 + num3
-    # print(fullNum)
+    import telebot
+    from telebot import types
+    import requests
 
-    # Task 2
-    # first_Number = input("Введіть перше число: ")
-    # second_Number = input("Введіть друге число: ")
-    # third_Number = input("Введіть третє число: ")
-    # fourth_Number = input("Введіть четверте число: ")
-    #
-    # whole_Number = first_Number + second_Number + third_Number + fourth_Number
-    # print(whole_Number)
-    #
-    # print(int(first_Number) * int(second_Number) * int(third_Number) * int(fourth_Number))
+    bot = telebot.TeleBot("6342244998:AAEfTjyeKwBQtadMfGfDYchZxSESt0Vs-tI")
 
-    # Task 3
-    # meters = int(input("Введіть метри: "))
-    # centimeters = meters * 100
-    # decimeters = meters * 10
-    # millimeters = meters * 1000
-    # miles = meters / 1609.344
-    #
-    # print("Метрів:", meters)
-    # print("Сантиметрів: ", centimeters)
-    # print("Дециметрів: ", decimeters)
-    # print("Міліметрів: ", millimeters)
-    # print("Миль: ", miles)
+    exchange = requests.get("http://data.fixer.io/api/latest?access_key=95a514490ca9c1254b7cabe1caf2bbb2&format=1")
+    rates = exchange.json()
+    def main_reply_menu():
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
 
-    # Task 4
-    # base = int(input("Введіть розмір основи: "))
-    # height = int(input("Введіть розмір висоти: "))
-    # S = 0.5 * base * height
-    #
-    # print("Площа цього трикутника: ", S)
+        markup.row(types.KeyboardButton("Побачити курс валют"))
+        return markup
 
-    # Task 5
-    # custom_Numbers = str(input("Введіть числа: ")[::-1])
-    #
-    # print(custom_Numbers)
+
+    @bot.message_handler(commands=["start"])
+    def isWorking(msg):
+        bot.reply_to(msg, "Я включився", reply_markup=main_reply_menu())
+
+
+    @bot.message_handler(func=lambda message: True)
+    def echo_all(msg):
+        cid = msg.chat.id
+        if msg.text == "Побачити курс валют":
+            bot.reply_to(msg, f"1 USD - {round(rates['rates']['UAH'] / rates['rates']['USD']), 2} UAH \n1 EUR - {round(rates['rates']['UAH'] / rates['rates']['EUR']), 2} UAH")
+
+
+    bot.infinity_polling()
