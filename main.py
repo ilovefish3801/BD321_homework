@@ -3,7 +3,7 @@ if __name__ == "__main__":
     from telebot import types
     import requests
 
-    bot = telebot.TeleBot("6342244998:AAEfTjyeKwBQtadMfGfDYchZxSESt0Vs-tI")
+    bot = telebot.TeleBot("")
 
     exchange = requests.get("http://data.fixer.io/api/latest?access_key=95a514490ca9c1254b7cabe1caf2bbb2&format=1")
     rates = exchange.json()
