@@ -1,44 +1,48 @@
 if __name__ == "__main__":
     # Task 1
-    # num1 = input("Введіть перще число: ")
-    # num2 = input("Введіть друге число: ")
-    # num3 = input("Введіть третє число: ")
+    # numberOne = int(input("Введіть перше число: "))
+    # numberTwo = int(input("Введіть друге число: "))
     #
-    # fullNum = num1 + num2 + num3
-    # print(fullNum)
+    # finalNum = 1
+    # for i in range(numberTwo):
+    #     finalNum *= numberOne
+    # print(finalNum)
 
     # Task 2
-    # first_Number = input("Введіть перше число: ")
-    # second_Number = input("Введіть друге число: ")
-    # third_Number = input("Введіть третє число: ")
-    # fourth_Number = input("Введіть четверте число: ")
+
+    # count = 0
     #
-    # whole_Number = first_Number + second_Number + third_Number + fourth_Number
-    # print(whole_Number)
-    #
-    # print(int(first_Number) * int(second_Number) * int(third_Number) * int(fourth_Number))
+    # for i in range(100, 1000):
+    #     i = str(i)
+    #     if i[0] == i[1] or i[0] == i[2] or i[1] == i[2]:
+    #         count += 1
+    # print(count)
 
     # Task 3
-    # meters = int(input("Введіть метри: "))
-    # centimeters = meters * 100
-    # decimeters = meters * 10
-    # millimeters = meters * 1000
-    # miles = meters / 1609.344
-    #
-    # print("Метрів:", meters)
-    # print("Сантиметрів: ", centimeters)
-    # print("Дециметрів: ", decimeters)
-    # print("Міліметрів: ", millimeters)
-    # print("Миль: ", miles)
+
+    # count = 0
+    # for i in range(100, 10000):
+    #     check = set(str(i))
+    #     if len(check) == len(str(i)):
+    #         count += 1
+    # print(count)
+
+    # count = 0
+    # for i in range(100, 10000):
+    #     check = {*str(i)}
+    #     if len(check) == len(str(i)):
+    #         count += 1
+    # print(count)
 
     # Task 4
-    # base = int(input("Введіть розмір основи: "))
-    # height = int(input("Введіть розмір висоти: "))
-    # S = 0.5 * base * height
-    #
-    # print("Площа цього трикутника: ", S)
 
-    # Task 5
-    # custom_Numbers = str(input("Введіть числа: ")[::-1])
-    #
-    # print(custom_Numbers)
+    number = int(input("Введіть число: "))
+    number = str(number)
+
+    newNum = ""
+
+    for i in number:
+        if i != "6" and i != "3":
+            newNum += i
+
+    print(newNum)
